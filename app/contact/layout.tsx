@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -20,4 +21,3 @@ export default function ContactLayout({
 }) {
   return <>{children}</>;
 }
-

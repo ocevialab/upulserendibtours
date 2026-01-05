@@ -13,7 +13,8 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

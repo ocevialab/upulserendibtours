@@ -27,16 +27,19 @@ npm run dev
 For production deployment, set the environment variable in your hosting platform:
 
 #### Vercel
+
 1. Go to your project settings
 2. Navigate to "Environment Variables"
 3. Add `NEXT_PUBLIC_BASE_URL` with your production domain
 
 #### Netlify
+
 1. Go to Site settings
 2. Navigate to "Environment variables"
 3. Add `NEXT_PUBLIC_BASE_URL` with your production domain
 
 #### Other Platforms
+
 Set the `NEXT_PUBLIC_BASE_URL` environment variable in your platform's environment variable settings.
 
 ### Important Notes
@@ -62,4 +65,3 @@ After setting the environment variable, verify it's working:
 ### Current Status
 
 All files are now configured to use `https://www.upulserendibtours.com` as the default domain. You can still override this by setting the `NEXT_PUBLIC_BASE_URL` environment variable if needed.
-

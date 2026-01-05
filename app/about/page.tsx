@@ -5,7 +5,8 @@ import { Camera, Award, Users, Calendar } from "lucide-react";
 import profile from "public/assets/prof.jpg";
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
 
 export const metadata: Metadata = {
   title: "About Upul Dunuhinga",

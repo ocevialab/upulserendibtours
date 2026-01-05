@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Camera } from "lucide-react";
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -52,7 +53,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 z-10">
           <div className="max-w-3xl fade-in">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">
-              Capturing Sri Lanka's Wild Beauty
+              Capturing Sri Lanka&apos;s Wild Beauty
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8">
               Award-winning wildlife photography by Upul Dunuhinga, showcasing
@@ -90,7 +91,7 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground max-w-2xl">
               A showcase of my finest wildlife moments, captured across Sri
-              Lanka's stunning national parks.{" "}
+              Lanka&apos;s stunning national parks.{" "}
             </p>
           </header>
 
@@ -165,7 +166,7 @@ export default function Home() {
                 id="locations-heading"
                 className="text-3xl md:text-4xl font-playfair font-bold"
               >
-                Explore Sri Lanka's Wildlife Habitats
+                Explore Sri Lanka&apos;s Wildlife Habitats
               </h2>
               <p className="text-muted-foreground">
                 Sri Lanka, a biodiversity hotspot, hosts diverse wildlife
@@ -245,9 +246,9 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <blockquote className="max-w-3xl mx-auto">
             <p className="text-2xl md:text-3xl font-playfair italic mb-6">
-              "Wildlife photography requires patience, understanding animals,
-              appreciating nature, and freezing fleeting moments that reveal the
-              planet’s incredible beauty."
+              &quot;Wildlife photography requires patience, understanding
+              animals, appreciating nature, and freezing fleeting moments that
+              reveal the planet&apos;s incredible beauty.&quot;
             </p>
             <cite className="text-lg">— Upul Dunuhinga</cite>
           </blockquote>
@@ -361,12 +362,12 @@ export default function Home() {
                 id="cta-heading"
                 className="text-3xl md:text-4xl font-playfair font-bold mb-4"
               >
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-primary-foreground/90 max-w-xl">
-                Whether you're looking for wildlife photography services,
+                Whether you&apos;re looking for wildlife photography services,
                 planning to join a safari, or interested in purchasing prints,
-                I'm here to help bring your vision to life.
+                I&apos;m here to help bring your vision to life.
               </p>
             </div>
             <div>
