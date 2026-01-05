@@ -2,22 +2,81 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import type { Metadata } from "next";
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+
+export const metadata: Metadata = {
+  title: "Wildlife Gallery",
+  description:
+    "Explore stunning wildlife photography galleries featuring elephants, leopards, birds, crocodiles, monkeys, deer, and golden jackals from Sri Lanka's national parks.",
+  openGraph: {
+    title: "Wildlife Photography Gallery | Upul Dunuhinga",
+    description:
+      "Explore stunning wildlife photography galleries from Sri Lanka.",
+    images: [`${baseUrl}/gallery/Elephant/Elephant1.jpg`],
+  },
+};
 
 export default function GalleryPage() {
   // Gallery data with categories
   const galleries = {
     Elephants: [
-      { src: "../gallery/Elephant/Elephant1.jpg", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant2.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant3.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant4.jpg", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant5.jpg", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 6.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 7.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 8.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 9.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 10.JPG", alt: "Elephant", caption: "" },
-      { src: "../gallery/Elephant/Elephant 12.JPG", alt: "Elephant", caption: "" },
+      {
+        src: "../gallery/Elephant/Elephant1.jpg",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant2.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant3.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant4.jpg",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant5.jpg",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 6.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 7.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 8.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 9.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 10.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
+      {
+        src: "../gallery/Elephant/Elephant 12.JPG",
+        alt: "Elephant",
+        caption: "",
+      },
     ],
     birds: [
       { src: "../gallery/Birds/Birds 1.jpg", alt: "birds", caption: "" },
@@ -41,12 +100,32 @@ export default function GalleryPage() {
       { src: "../gallery/Birds/Birds 19.JPG", alt: "birds", caption: "" },
     ],
     reptiles: [
-      { src: "/assets/Crocdile 2.jpg", alt: "Crocodile", caption: "Marsh crocodile, Yala" },
+      {
+        src: "/assets/Crocdile 2.jpg",
+        alt: "Crocodile",
+        caption: "Marsh crocodile, Yala",
+      },
       { src: "/assets/Crocdile 3.jpg", alt: "Crocodile", caption: "" },
-      { src: "../gallery/Crocadile/Crocadile 1.JPG", alt: "Crocodile", caption: "" },
-      { src: "../gallery/Crocadile/Crocadile 3.JPG", alt: "Crocodile", caption: "" },
-      { src: "../gallery/Crocadile/Crocadile 4.JPG", alt: "Crocodile", caption: "" },
-      { src: "../gallery/Crocadile/Crocadile 5.JPG", alt: "Crocodile", caption: "" },
+      {
+        src: "../gallery/Crocadile/Crocadile 1.JPG",
+        alt: "Crocodile",
+        caption: "",
+      },
+      {
+        src: "../gallery/Crocadile/Crocadile 3.JPG",
+        alt: "Crocodile",
+        caption: "",
+      },
+      {
+        src: "../gallery/Crocadile/Crocadile 4.JPG",
+        alt: "Crocodile",
+        caption: "",
+      },
+      {
+        src: "../gallery/Crocadile/Crocadile 5.JPG",
+        alt: "Crocodile",
+        caption: "",
+      },
       { src: "../gallery/Crocadile/1.jpeg", alt: "Crocodile", caption: "" },
     ],
     Monkey: [
@@ -77,7 +156,7 @@ export default function GalleryPage() {
       { src: "../gallery/Jackals/1.JPG", alt: "Golden Jackal", caption: "" },
       { src: "../gallery/Jackals/2.JPG", alt: "Golden Jackal", caption: "" },
       { src: "../gallery/Jackals/3.JPG", alt: "Golden Jackal", caption: "" },
-    ]
+    ],
   };
 
   return (
@@ -85,9 +164,13 @@ export default function GalleryPage() {
       <div className="container mx-auto px-4 md:px-6">
         {/* Page Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-6">Wildlife Gallery</h1>
+          <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
+            Wildlife Gallery
+          </h1>
           <p className="text-lg text-muted-foreground">
-            Explore the diverse wildlife of Sri Lanka through my lens. Each photograph captures a unique moment in nature, telling stories of Sri Lanka's rich biodiversity.
+            Explore the diverse wildlife of Sri Lanka through my lens. Each
+            photograph captures a unique moment in nature, telling stories of
+            Sri Lanka's rich biodiversity.
           </p>
         </div>
 
@@ -112,16 +195,26 @@ export default function GalleryPage() {
           <TabsContent value="Elephants" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.Elephants.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -133,16 +226,26 @@ export default function GalleryPage() {
           <TabsContent value="birds" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.birds.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -154,16 +257,26 @@ export default function GalleryPage() {
           <TabsContent value="reptiles" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.reptiles.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                   {photo.caption && (
@@ -180,16 +293,26 @@ export default function GalleryPage() {
           <TabsContent value="Monkey" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.Monkey.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -201,16 +324,26 @@ export default function GalleryPage() {
           <TabsContent value="Tiger" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.Tiger.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -222,16 +355,26 @@ export default function GalleryPage() {
           <TabsContent value="Deer" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.Deer.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -243,16 +386,26 @@ export default function GalleryPage() {
           <TabsContent value="Jackal" className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {galleries.Jackal.map((photo, index) => (
-                <div key={index} className="image-card group overflow-hidden bg-card rounded-lg border">
+                <div
+                  key={index}
+                  className="image-card group overflow-hidden bg-card rounded-lg border"
+                >
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={photo.src}
-                      alt={photo.alt}
+                      alt={`${
+                        photo.alt
+                      } - Wildlife photography by Upul Dunuhinga${
+                        photo.caption ? `, ${photo.caption}` : ""
+                      }`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Button variant="secondary" size="sm">View Full Size</Button>
+                      <Button variant="secondary" size="sm">
+                        View Full Size
+                      </Button>
                     </div>
                   </div>
                 </div>

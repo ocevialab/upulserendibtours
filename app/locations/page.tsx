@@ -2,6 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MapPin, Camera, Calendar } from "lucide-react";
+import type { Metadata } from "next";
+
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.upulserendibtours.com";
+
+export const metadata: Metadata = {
+  title: "Photography Locations",
+  description:
+    "Explore Yala National Park, Udawalawe National Park, and Sigiriya - prime wildlife photography locations in Sri Lanka. Best times to visit and photography tips.",
+  openGraph: {
+    title: "Wildlife Photography Locations in Sri Lanka",
+    description:
+      "Explore prime wildlife photography locations: Yala, Udawalawe, and Sigiriya.",
+    images: [`${baseUrl}/assets/parks/R (1).jpeg`],
+  },
+};
 
 export default function LocationsPage() {
   const locations = [
